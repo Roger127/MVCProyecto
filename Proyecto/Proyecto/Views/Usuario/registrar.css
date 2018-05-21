@@ -1,0 +1,81 @@
+﻿      body{
+	        font-family: helvetica;
+            background: url("../Imagenes/background_login.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment:fixed;
+        }
+    
+      .contenedor {
+          padding-top:70px;
+          border:0;
+
+    }
+       #registrar {
+            margin-top: 100px;
+            width: 40%;
+            text-align: center;
+            margin:auto;
+            padding-top: 50px;
+            padding-bottom: 20px;
+            border: 1px #000 solid;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, .5);
+        }
+        .txtLog{
+            padding: 10px 15px;
+            width:60%;
+            border-radius: 5px;
+            border: 1px black solid;
+        }
+        #btnIniciarSesion{
+            color:white;
+            padding: 5px 75px;
+            font-size: 18px;
+            font-weight: normal;
+            border-radius: 5px;
+        }
+
+        .disabled {
+             background-color: #3ebadc;
+        }
+
+        .enabled {
+            background-color: #2F8BA4; 
+        }
+
+        #Contenedor2{
+            text-align:left;
+            padding-left: 20px;
+        }
+
+        .letreroLabel {
+            display:block;
+            text-align:left;
+        }
+
+        .lnkbRecuperar{
+            font-size: 10px;
+            text-decoration: none;
+            color: #808080;
+        }
+
+         img#imgLogin {
+            width:100px;
+            margin-left:-3em;
+            margin-top:-7em;
+            position:absolute;
+            padding:0;
+           }
+
+#contodo >*{
+
+        margin:10px 0;
+
+}
+
+#contodo > label {
+    
+        margin-bottom:20px;
+
+}

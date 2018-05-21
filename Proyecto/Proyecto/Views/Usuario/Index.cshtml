@@ -1,0 +1,162 @@
+﻿@model Proyecto.Models.Usuario
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>POST | Registrar</title>
+   
+    <link href="~/App_Start/Style.css" rel="stylesheet" type="text/css" />
+    <link href="~/App_Start/registrar.css" rel="stylesheet" type="text/css" />
+    
+    
+    <script src="~/App_Start/jquery-3.2.1.js"></script>
+    <appSettings>
+        <add key="ValidationSettings:UnobtrusiveValidationMode" value="None"></add>
+    </appSettings>
+
+    <script language="javascript">
+
+       function validaNombreTamanio(sender,args){
+            if(args.Value.length<=150){
+
+                args.IsValid=true;
+
+            }else{
+                args.IsValid=false;
+            }
+       }
+
+       function validaContraTamanio(sender, args) {
+           if (args.Value.length >= 8 && args.Value.length <= 20) {
+
+               args.IsValid = true;
+
+           } else {
+               args.IsValid = false;
+           }
+       }
+
+
+        function validaUsuaTamanio(sender, args) {
+           if (args.Value.length >= 8 && args.Value.length <= 20) {
+
+               args.IsValid = true;
+
+           } else {
+               args.IsValid = false;
+           }
+       }
+
+
+       function habilitarButton() {
+
+           if (!$("#cbAceptoTermino").is(':checked')) {
+               $('#btnIniciarSesion').attr('disabled', 'disabled');
+               $('#btnIniciarSesion').removeClass('enabled');
+               $('#btnIniciarSesion').addClass('disabled');
+           } else {
+               $('#btnIniciarSesion').removeAttr('disabled');
+               $('#btnIniciarSesion').removeClass('disabled');
+               $('#btnIniciarSesion').addClass('enabled');
+
+           }
+
+       }
+
+
+    </script>
+
+
+    <style>
+        .enabled {
+            cursor: pointer;
+        }
+
+        .disabled {
+            cursor: not-allowed;
+        }
+
+        #registrar {
+            border: 1px #000 solid;
+            border-radius: 10px;
+        }
+
+        .txtLog {
+            border: 1px black solid;
+        }
+
+        imgLogin {
+            width: 40px;
+            margin-left: -3.5em;
+            margin-top: -6em;
+            border:1px white dashed;
+        }
+
+        .contenedor {
+            padding-top: 20px;
+            border: 0;
+        }
+    </style>
+
+</head>
+<body>
+  
+    <div class="contenedor">
+        <form id="registrar" method="post" action="Registrar">
+            <img id="imgLogin" alt="" src="~/App_Start/Imagenes/icono_perfil.png" />
+            <br />
+            <label ID="Label1"  Text="Registrarse"></label>
+            <div id="contodo">
+                <div>
+
+                    <input type="text" name="VNombre" class="txtLog" placeholder="Nombre(s)" OnTextChanged="TxNombre_TextChanged"></input>
+
+                </div>
+
+                <div>
+
+                    <input type="text" id="TxApellido" class="txtLog" name="VApellido" placeholder="Apellido(s)" OnTextChanged="TxApellido_TextChanged"></input>
+                    <asp:RequiredFieldValidator ID="RFrequireApellido"  ControlToValidate="TxApellido" Display="None" ErrorMessage="No ingresó su(s) apellido(s)" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                    <asp:CustomValidator ID="CVtamanioApellido"  ControlToValidate="TxApellido" Display="None" ErrorMessage="El correo debe contener menos de 150 caracteres" ClientValidationFunction="validaNombreTamanio"></asp:CustomValidator>
+                    <asp:RegularExpressionValidator ID="REexpresionApellido"  ControlToValidate="TxApellido" Display="None" ErrorMessage="El apellido no cumple con formato válido" SetFocusOnError="True" ValidationExpression="([A-Za-zñáéíóú]+[\s]*)+"></asp:RegularExpressionValidator>
+                    <br />
+                </div>
+
+                <div>
+
+                    <input type="text" id="TxCorreo" class="txtLog" placeholder="Correo" name="VCorreo" OnTextChanged="TxCorreo_TextChanged"></input>
+                 
+                </div>
+
+                <div>
+
+                    <input type="text" id="TxtNomUsua" class="txtLog" placeholder="Nombre de usuario" name="VNombreUsuario" OnTextChanged="TxtNomUsua_TextChanged"></input>
+                                 </div>
+
+                <div>
+
+                    <input id="TxPass" type="password" class="txtLog" placeholder="Contraseña" OnTextChanged="TxPass_TextChanged"/>
+                </div>
+
+                <div>
+
+                    <input type="password" id="TxPassConf" class="txtLog"  placeholder="Confirmar contraseña" />
+                  </div>
+
+                <asp:ValidationSummary ID="VRresumenRegistrar"  DisplayMode="List" ShowMessageBox="True" ShowSummary="False" />
+
+                <label><input type="checkbox" id="cbAceptoTermino" class="lnkbRecuperar" onClick="habilitarButton()" /> Acepto términos y condiciones</label>
+                <br />
+                <input  id="btnIniciarSesion" name="Registrar" class="disabled" type="submit" disabled="disabled" value="Registrar" />
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>

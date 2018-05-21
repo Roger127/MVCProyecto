@@ -1,0 +1,123 @@
+﻿*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+    background-image: url(Imagenes/background_login.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.actividad a{
+  text-decoration:none;  
+}
+
+.contenedor{
+	width: 80%;
+	margin: auto;
+    margin-top:80px;
+	padding: 10px;
+	box-sizing: border-box;    
+	border: 1px black solid ;
+    padding: 30px;
+}
+
+.primera_caja{
+	width: 60%;
+	padding: 10px;
+	box-sizing: border-box;
+	height: 450px;	
+	float: left;
+    margin-bottom: 30px;
+    background-color: #9BEF7E;
+    border-radius: 5px;
+    padding:15px;
+}
+
+.imagen{
+	float: left;
+	width: 200px;
+    height: 200px;
+	margin-bottom: 15px;
+    background-color:white;
+     border-radius: 5px;
+}
+
+.info{
+	float: right;
+	width: 360px;
+	box-sizing: border-box;
+	margin-top: 25px;
+}
+
+.info h1{
+    color:white;
+    font-family: Impact;
+}
+
+.arreglos{
+    background-color:cornflowerblue;
+    padding: 5px 0px;
+}
+
+.actividad{
+	clear: both;
+	margin: 10px;
+}
+
+.segunda_caja{
+	float: right;
+	width: 30%;
+	height: 480px;
+    padding: 10px;
+    margin-bottom:20px;
+    box-sizing: border-box;
+    border: 3px #6BA3E1 solid;
+    border-radius: 5px;
+    background-color:#2E88E9;
+}
+
+.segunda_caja h2{
+    color:white;
+    font-weight:normal;
+    border-bottom: 2px white solid;
+    padding-bottom: 5px;
+}
+
+.caja_seg{
+    padding: 5px;
+    border: 1px black solid;
+    background-color:dimgray;
+    color: white;
+    border-radius: 5px;
+  
+}
+
+.mensaje{
+    clear: both;
+    padding:10px;
+    box-sizing:border-box;
+}
+
+.acomodar{
+      margin-top: 20px;
+}
+
+.cajita{
+    border:1px rede solid;
+    border-radius:10px;
+}
+
+.botonEnviar{
+    color:white;
+    background-color: #2F8BA4;
+    padding: 5px 20px;
+    font-size: 18px;
+    font-weight: normal;
+    border-radius: 5px;
+}
+.box_info{
+    border-bottom: 1px black solid;
+    padding-bottom: 5px;
+}

@@ -1,0 +1,47 @@
+﻿body {
+    margin:0;
+}
+#mi_header {
+    padding: 1.2em 1em;
+    background:#000;
+}
+
+#menu_login_regis {
+    margin-bottom:1.5em;
+    display:block;
+    display:inherit;
+}
+
+.btnHeader {
+            color:white;
+            margin:0 5px;
+            background-color: #2F8BA4;
+            padding: 5px 15px;
+            font-size: 18px;
+            border:4px transparent solid;
+            font-weight: normal;
+            border-radius: 5px;
+}
+
+  .btnHeader:hover{
+      background:rgb(5, 110, 150);
+      cursor:pointer;
+    }
+#mi_header {
+   text-align:right;
+}
+
+.imgLogo {
+
+    width:250px;
+    position:absolute;
+    margin-left:3em;
+    margin-top:-2em;
+    background:#FFF;
+    padding:10px;
+
+}
+
+.btnHeader {
+    text-decoration:none;
+}

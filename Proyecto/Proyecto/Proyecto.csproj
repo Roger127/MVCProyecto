@@ -89,19 +89,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Start\header_principal.css" />
+    <Content Include="App_Start\registrar.css" />
+    <Content Include="App_Start\Style.css" />
     <Content Include="Global.asax" />
+    <Content Include="App_Start\Imagenes\background_login.jpg" />
+    <Content Include="App_Start\Imagenes\background_perfil.jpg" />
+    <Content Include="App_Start\Imagenes\icono_login.png" />
+    <Content Include="App_Start\Imagenes\icono_perfil.png" />
+    <Content Include="App_Start\Imagenes\logofinta.png" />
+    <Content Include="App_Start\jquery-3.2.1.js" />
+    <Content Include="Views\Usuario\Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
+    <Content Include="Views\Usuario\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,8 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\css\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

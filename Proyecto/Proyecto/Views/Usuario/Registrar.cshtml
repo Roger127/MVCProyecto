@@ -1,0 +1,27 @@
+﻿@model Proyecto.Models.Usuario
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Usuario</title>
+</head>
+<body>
+    <div> 
+        <h1>Datos registrados correctamente</h1>
+        <br />
+        <h2>A continuación te mostramos los datos almacenados</h2>
+        <label>Nombre de usuario: @Model.NombreUsuario</label>
+        <br />
+        <label>Correo electrónico: @Model.Correo</label>
+        <br />
+        <label>Nombre: @Model.Nombre  @Model.Apellido</label>
+        <br />
+    </div>
+</body>
+</html>

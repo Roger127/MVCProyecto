@@ -9,19 +9,21 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Usuario</title>
+    <title>POST | Usuario</title>
+    <link href="~/App_Start/usuario.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div> 
+    <div class="contenedor"> 
         <h1>Datos registrados correctamente</h1>
         <br />
         <h2>A continuación te mostramos los datos almacenados</h2>
+        <label>Nombre: @Model.Nombre  @Model.Apellido</label>
+        <br />
         <label>Nombre de usuario: @Model.NombreUsuario</label>
         <br />
         <label>Correo electrónico: @Model.Correo</label>
-        <br />
-        <label>Nombre: @Model.Nombre  @Model.Apellido</label>
-        <br />
+        <br /><br /><br /><br />
+        <a class="boton_personalizado" href="Index">Regresar</a>
     </div>
 </body>
 </html>

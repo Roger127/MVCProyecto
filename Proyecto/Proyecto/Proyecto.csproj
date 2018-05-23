@@ -92,6 +92,7 @@
     <Content Include="App_Start\header_principal.css" />
     <Content Include="App_Start\registrar.css" />
     <Content Include="App_Start\Style.css" />
+    <Content Include="App_Start\usuario.css" />
     <Content Include="Global.asax" />
     <Content Include="App_Start\Imagenes\background_login.jpg" />
     <Content Include="App_Start\Imagenes\background_perfil.jpg" />
